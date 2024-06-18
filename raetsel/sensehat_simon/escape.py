@@ -51,12 +51,9 @@ def main(
     #print(sequenceHelper.getSequence())	
     while True:
         # Check if the player has won
-        print("lvls_won: ", lvls_won)
-        print("lvls_to_win: ", lvls_to_win)
-        print("curr_lvl: ", curr_lvl)
         if lvls_won == lvls_to_win:
             # Show won instance
-            ledHelper.won(curr_lvl)
+            ledHelper.won(lvls_won)
             # Return True to indicate that the player has won
             return True
         for event in sense.stick.get_events():
