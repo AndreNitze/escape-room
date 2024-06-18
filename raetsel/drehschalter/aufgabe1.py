@@ -76,7 +76,7 @@ def aufgabe1(counter: int) -> int:
             "correct" : ""
         }
     }
-
+    os.system('clear')
     print(q_and_a[counter]["frage"])
     GPIO.add_event_detect(Drehschalter_CLK_PIN, GPIO.BOTH, callback=lambda y: printResultDrehschalter(counter, q_and_a), bouncetime=50)
     GPIO.add_event_detect(Knopf_PIN, GPIO.FALLING, bouncetime=100)
