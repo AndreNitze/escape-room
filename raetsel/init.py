@@ -8,12 +8,8 @@ from evdev import InputDevice
 import RPi.GPIO as GPIO
 from sense_hat import SenseHat
 from functools import partial
-import os
-
 
 s = SenseHat()
-
-
 
 #kann auch event0, event1, event2, event3 sein
 infrarot_sensor = InputDevice("/dev/input/event3")
@@ -47,13 +43,13 @@ def start_escape_room():
 				lvl_up(partial(aufgabe4.main), GPIO, raetsel)
 			if raetsel == 5:
 				s.show_letter("?")
-				print("Nimmst du am Workshop teil? j/n")
-				x = input("Bitte j oder n eingeben: ")	
-				print(x)
-				if x == "J" or x == "j":
-					lvl_up(partial(asl.main), GPIO, raetsel)
-				else:
-					return(print("Escape-Room bendet"))
+				x = ""
+				while x.lower() != "j": # Schleife bis "j" oder "J" eingegeben wird
+					print("\nNimmst du am Workshop teil? j/n")
+					x = input("Bitte j oder n eingeben: ")
+					if x.lower() != "j":
+						print("Ungültige Eingabe. Bitte j oder n eingeben.")
+				lvl_up(partial(asl.main), GPIO, raetsel)
 			if raetsel == 6:
 				print("Der Schluessel liegt unter der Tastatur")
 				# print("buzzzer")
