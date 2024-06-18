@@ -9,7 +9,7 @@ def main(
         speed:float = 1,
         speed_factor:float = 0.7,
         append_factor:int = 1,
-        lvls_to_win:int = 6
+        lvls_to_win:int = 5
         ) -> None:
     """
     Main function of the game.
@@ -51,6 +51,9 @@ def main(
     #print(sequenceHelper.getSequence())	
     while True:
         # Check if the player has won
+        print("lvls_won: ", lvls_won)
+        print("lvls_to_win: ", lvls_to_win)
+        print("curr_lvl: ", curr_lvl)
         if lvls_won == lvls_to_win:
             # Show won instance
             ledHelper.won(curr_lvl)
