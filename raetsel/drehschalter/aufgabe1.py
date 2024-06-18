@@ -99,4 +99,4 @@ def aufgabe1(counter: int) -> int:
                     print("Leider falsch, versuche ein anderes Ergebnis.")
                     print(q_and_a[counter]["frage"])
 
-# aufgabe1(1)
+#aufgabe1(1)
