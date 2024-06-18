@@ -5,7 +5,6 @@
 import cv2
 import mediapipe as freedomtech
 from gtts import gTTS
-import os
 
 drawingModule = freedomtech.solutions.drawing_utils
 handsModule = freedomtech.solutions.hands

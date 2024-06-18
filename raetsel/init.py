@@ -7,10 +7,13 @@ from hand_recognition import escape_ASL as asl
 from evdev import InputDevice
 import RPi.GPIO as GPIO
 from sense_hat import SenseHat
-
 from functools import partial
+import os
+
 
 s = SenseHat()
+
+
 
 #kann auch event0, event1, event2, event3 sein
 infrarot_sensor = InputDevice("/dev/input/event3")

@@ -11,6 +11,7 @@ import RPi.GPIO as GPIO
 
 sense = SenseHat()
 
+
 drawingModule = freedomtech.solutions.drawing_utils
 handsModule = freedomtech.solutions.hands
 
